@@ -1,5 +1,7 @@
-Nginx Test
-==========
+Nginx Dev
+=========
+
+A Docker 1.8 image for easily exposing a local development folder in OSX, to be hosted with Nginx.  Uses the Docker Volume configuration, which negates the need for spurious middle-ware, needed by previous versions of Docker/Boot2Docker, to keep file changes in sync with the hosted Nginx files.
 
 1. Building the image
 ---------------------
