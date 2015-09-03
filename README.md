@@ -6,9 +6,9 @@ A Docker 1.8 image for easily exposing a local development folder in OSX, to be 
 1. Building the image
 ---------------------
 
-To build this image, simply issue the following Docker command, assuming we want to name the image `nginx-test`.
+To build this image, simply issue the following Docker command, assuming we want to name the image `nginx-dev`.
 
-    docker build -t nginx-test .
+    docker build -t nginx-dev .
     
 Docker will step through each of the build instructions in the `Dockerfile` and create our image for us.
 
@@ -41,14 +41,8 @@ The command
 Finally run
 -----------
 
-
 Putting this altogether, we get:
 
-
-     docker run -v /Users/jamie/Sites/git/jamiehill/node-nginx-test/app:/usr/share/nginx/html:ro -P -d nginx-test
-    
-    
-    
-
+     docker run -v /Users/me/path/to/app/source/files:/usr/share/nginx/html:ro -P -d nginx-dev
     
 Okay?
