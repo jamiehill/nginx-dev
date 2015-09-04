@@ -21,7 +21,7 @@ To specify a local volume, we need to add the path using the -v flag.
 
 The syntax for running the container, is as follows:
 
-    docker run -v <local-directory>:/usr/share/nginx/html:ro -P -d <image-name>
+    docker run -v $(pwd):/usr/share/nginx/html:ro -P -d <image-name>
 
 The command
 -----------
@@ -43,6 +43,6 @@ Finally run
 
 Putting this altogether, we get:
 
-     docker run -v /Users/me/path/to/app/source/files:/usr/share/nginx/html:ro -P -d nginx-dev
+     docker run -v $(pwd)/app:/usr/share/nginx/html:ro -P -d nginx-dev
     
 Okay?
